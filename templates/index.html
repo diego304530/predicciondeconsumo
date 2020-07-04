@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4fb9680783.js" crossorigin="anonymous"></script>
+
+
+  
+
+  <title>Recoleccion de datos </title>
+</head>
+<body >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand " >Ingreso de informacion</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse sticky-top mx-auto" id="navegacion">
+      <ul class="navbar-nav mx-auto">
+       <!--  <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li> -->
+        
+      </ul>
+      <button class="btn btn-outline-light my-2 my-sm-0" id="btniniciosesion">Iniciar Sesion</button>
+
+    </div>
+  </nav>
+
+
+  <div class="container mt-3">
+
+
+   <div class="card mx-auto" style="width: 40rem;">
+    <div class="card-body">
+      <h5 class="card-title text-center">BIENVENIDOS</h5>
+      <h6 class="card-subtitle mb-2 text-muted text-center">Por favor digita la informacion solicitada</h6>
+      <p class="card-text"> 
+
+        <form id="formCl" class="mx-2" ">
+          <input type="hidden" name="opcion" id="opcion">
+          <div class="form-group ">
+            <label for="identificacion" id="lblidentificacion">Identificacion: </label>
+            <input type="text" class="form-control" maxlength="10" required name="identificacion" id="identificacion">
+          </div>    
+          <div class="form-group">
+            <label for="nombre">Nombres: </label>
+            <input type="text" class="form-control " name="nombre" required id="nombre">
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellidos: </label>
+            <input type="text" class="form-control " name="apellido" required id="apellido">
+          </div>
+
+          <div class="form-group">
+            <label for="edad">Edad: </label>
+            <input type="number" class="form-control " name="edad" required id="edad" min="0" max="30">
+          </div>
+
+          <div class="form-group" id="seleccion">
+            <label for="colegio">Colegio al que perteneces:</label>
+            <select class="form-control" id="colegio" name="colegio">
+              <option class="text-muted" value="0">Seleccione una opcion</option>
+              <option value="Real Colegio San Francisco de Asís">Real Colegio San Francisco de Asís</option>
+              <option value="Institución Educativa Carlos M. Simmonds">Institución Educativa Carlos M. Simmonds</option>
+              <option value="Institucion Educativa Rafael Pombo">Institucion Educativa Rafael Pombo</option>
+              
+            </select>
+            <div class="alert alert-danger" role="alert" id="rechazo"> 
+              Debes seleccionar una opcion valida
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label >¿Has fumado cigarrillo alguna vez?: </label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="fumar" id="r1" value="1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Si
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="fumar" id="r2" value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                No
+              </label>
+            </div>
+            
+          </div>
+
+          <div class="form-group">
+            <label >¿Alguna vez te han invitado a consumir sustancias psicoactivas (Marihuana, cocaina)?: </label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="psicoactivos"  value="1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Si
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="psicoactivos"  value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                No
+              </label>
+            </div>
+            
+          </div>
+
+          <div class="form-group">
+            <label >¿Tienes algun familiar que consume sustancias alucinogenas?: </label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="familiares"  value="1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Si
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="familiares"  value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                No
+              </label>
+            </div>
+            
+          </div>
+
+          <div class="form-group">
+            <label >¿Has sufrido rupturas amorosas?: </label>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rupturas"  value="1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Si
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rupturas"  value="0">
+              <label class="form-check-label" for="exampleRadios2">
+                No
+              </label>
+            </div>
+            
+          </div>
+
+
+
+          <div class="modal-footer">
+
+            <input type="submit" class="btn btn-primary btn-block" value="Enviar" name="enviar">
+          </div>
+        </form>    
+      </p>
+    </div>
+  </div>
+
+
+  <!-- modal carga -->
+
+  <div class="modal fade " id="envioDatos" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+         <div class="spinner-grow text-primary h3" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+
+        <div class="h3">ENVIANDO DATOS</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade " id="modalenv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body text-center">
+        <i class="far fa-check-circle h1 text-success" id="iconenvio"></i>
+        <div class="h3" id="textomodal">DATOS ENVIADOS</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cerrar">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- formulario inicio de sesion -->
+
+<div class="modal fade" id="iniciosesion" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title" id="staticBackdropLabel">INICIAR SESION</h5>
+      </div>
+      <form id="initsesion">
+        <div class="modal-body mx-3">
+
+
+
+          <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" class="form-control" id="usuario" name="usuario" required>            
+          </div>
+          <div class="form-group">
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" class="form-control" id="contrasenia" name="contrasenia" required>
+          </div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cerrarmodalform">Cerrar</button>
+          <input type="submit" name="ingresar" value="Ingresar" class="btn btn-primary">
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="/_inicio/"></script>
+
+
+
+</body>
+</html>
